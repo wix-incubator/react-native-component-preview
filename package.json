@@ -1,0 +1,41 @@
+{
+  "name": "react-native-component-preview",
+  "version": "1.0.0",
+  "description": "A small library for previewing react components",
+  "license": "MIT",
+  "author": "Eimantas Tučas <eimantast@wix.com>",
+  "main": "index.ts",
+  "homepage": "https://github.com/wix-incubator/react-native-component-preview#readme",
+  "bugs": {
+    "url": "https://github.com/wix-incubator/react-native-component-preview/issues"
+  },
+  "repository": {
+    "url": "git+https://github.com/wix-incubator/react-native-component-preview.git"
+  },
+  "scripts": {
+    "build": ":",
+    "tsc": "tsc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^17",
+    "@types/react-native": "^0.66",
+    "prettier": "^2.6.2",
+    "react": "^17",
+    "react-native": "^0.66",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "peerDependencies": {
+    "react": "^17",
+    "react-native": "^66"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "react-native",
+    "component",
+    "preview",
+    "storybook"
+  ]
+}
