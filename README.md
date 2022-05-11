@@ -11,7 +11,7 @@ With this library we can render components using different props to see how they
 ```ts
 import {ComponentPreviewBuilder, ComponentPreviews} from 'react-native-component-preview';
 
-// Build component previous using a provided builder.
+// Build component previews using a provided builder.
 export const postContentPreview = new ComponentPreviewBuilder('Post Content', PostContent)
   .withPreview({
     contentText: '',
@@ -21,7 +21,7 @@ export const postContentPreview = new ComponentPreviewBuilder('Post Content', Po
   })
   .build();
 
-// Build all of the previous into an array.
+// Put all of the previews into an array.
 const previews = [postContentPreview];
 
 // Renders Component Previews Screen
