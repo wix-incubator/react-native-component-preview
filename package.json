@@ -13,6 +13,7 @@
     "url": "git+https://github.com/wix-incubator/react-native-component-preview.git"
   },
   "scripts": {
+    "rsync": "rsync -rtvi ./src/ ./example/ExampleApp/node_modules/react-native-component-preview/src/",
     "build": ":",
     "tsc": "tsc"
   },

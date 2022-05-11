@@ -1,4 +1,3 @@
-//import {ComponentPreviewBuilder} from '../../../../';
 import {ComponentPreviewBuilder} from 'react-native-component-preview';
 import {PostContent} from './post-content';
 
