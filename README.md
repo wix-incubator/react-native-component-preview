@@ -12,12 +12,12 @@ With this library we can render components using different props to see how they
 import {ComponentPreviewBuilder, ComponentPreviews} from 'react-native-component-preview';
 
 // Build component previews using a provided builder.
-export const postContentPreview = new ComponentPreviewBuilder('Post Content', PostContent)
+export const postContentPreview = new ComponentPreviewBuilder({title: 'Post', component: PostContent})
   .withPreview({
-    contentText: '',
+    content: '',
   })
   .withPreview({
-    contentText: 'Hello World',
+    content: 'Hello World',
   })
   .build();
 
