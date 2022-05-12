@@ -1,3 +1,4 @@
-import {postContentPreview} from './post-content.preview';
+import {postListPreview} from './post-list.preview';
+import {postViewPreview} from './post-view.preview';
 
-export const previews = [postContentPreview];
+export const previews = [postViewPreview, postListPreview];
