@@ -13,19 +13,9 @@ interface PostListProps {
   posts: Array<Post>;
 }
 
-const renderItem = ({item}: {item: Post}) => {
-  return <PostView authorName={item.authorName} contentText={item.contentText} isLiked={item.isLiked} />;
-};
-
-const Separator = () => <View style={{height: 2, backgroundColor: 'grey'}} />;
-
 export const PostList: React.FC<PostListProps> = React.memo(({isLoading, posts}) => {
   if (isLoading) {
-    return (
-      <View style={{backgroundColor: 'white', padding: 12}}>
-        <ActivityIndicator />
-      </View>
-    );
+    return <Loader />;
   }
 
   return (
@@ -34,3 +24,15 @@ export const PostList: React.FC<PostListProps> = React.memo(({isLoading, posts})
     </View>
   );
 });
+
+const renderItem = ({item}: {item: Post}) => {
+  return <PostView authorName={item.authorName} contentText={item.contentText} isLiked={item.isLiked} />;
+};
+
+const Separator = () => <View style={{height: 2, backgroundColor: 'grey'}} />;
+
+const Loader = () => (
+  <View style={{backgroundColor: 'white', padding: 12}}>
+    <ActivityIndicator />
+  </View>
+);

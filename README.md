@@ -6,7 +6,7 @@ With this library we can render components using different props to see how they
 - Enforces of separation between UI and business logic. Smaller files, better readablity.
 - Testable components & code.
 
-### How To.
+### How To
 
 ```ts
 import {ComponentPreviewBuilder, ComponentPreviews} from 'react-native-component-preview';
@@ -27,3 +27,7 @@ const previews = [postContentPreview];
 // Renders Component Previews Screen
 const PreviewScreen = <ComponentPreviews previews={previews} />
 ```
+
+### Example
+
+Example app is included under /example directory. Run it as a regular react native expo application.
