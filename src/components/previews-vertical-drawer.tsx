@@ -11,7 +11,7 @@ interface VerticalDrawerProps {
 export const PreviewsVerticalDrawer: React.FC<VerticalDrawerProps> = React.memo(({previews, onPreviewPress}) => {
   const windowHeight = Dimensions.get('window').height;
   const EXPANDED_HEIGHT = Math.max(200, windowHeight / 3);
-  const COLLAPSED_HEIGHT = 34;
+  const COLLAPSED_HEIGHT = 35;
 
   const [expanded, setExpanded] = React.useState(true);
 
