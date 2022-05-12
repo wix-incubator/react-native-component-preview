@@ -18,15 +18,11 @@ export const PostList: React.FC<PostListProps> = React.memo(({isLoading, posts})
     return <Loader />;
   }
 
-  return (
-    <View>
-      <FlatList<Post> data={posts} renderItem={renderItem} ItemSeparatorComponent={Separator} />
-    </View>
-  );
+  return <FlatList<Post> data={posts} renderItem={renderItem} ItemSeparatorComponent={Separator} />;
 });
 
-const renderItem = ({item}: {item: Post}) => {
-  return <PostView authorName={item.authorName} contentText={item.contentText} isLiked={item.isLiked} />;
+const renderItem = ({item, index}: {item: Post; index: number}) => {
+  return <PostView key={index} authorName={item.authorName} contentText={item.contentText} isLiked={item.isLiked} />;
 };
 
 const Separator = () => <View style={{height: 2, backgroundColor: 'grey'}} />;

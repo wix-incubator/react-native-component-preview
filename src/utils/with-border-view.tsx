@@ -5,6 +5,6 @@ const BorderView: React.FC = ({children}) => (
   <View style={{borderWidth: 1, borderColor: 'green', marginVertical: 4}}>{children}</View>
 );
 
-export const withBorderView = (Component: JSX.Element) => {
-  return <BorderView>{Component}</BorderView>;
+export const withBorderView = (Component: JSX.Element, key: React.Key) => {
+  return <BorderView key={key}>{Component}</BorderView>;
 };

@@ -1,7 +1,11 @@
 import {ComponentPreviewBuilder} from 'react-native-component-preview';
 import {PostList} from './post-list';
 
-export const postListPreview = new ComponentPreviewBuilder('Post List', PostList)
+export const postListPreview = new ComponentPreviewBuilder({
+  title: 'Post List',
+  component: PostList,
+  containerType: 'View',
+})
   .withPreview({
     isLoading: true,
     posts: [],

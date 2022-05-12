@@ -11,7 +11,7 @@ interface VerticalDrawerProps {
 export const PreviewsVerticalDrawer: React.FC<VerticalDrawerProps> = React.memo(({previews, onPreviewPress}) => {
   const windowHeight = Dimensions.get('window').height;
   const EXPANDED_HEIGHT = Math.max(200, windowHeight / 3);
-  const COLLAPSED_HEIGHT = 40;
+  const COLLAPSED_HEIGHT = 34;
 
   const [expanded, setExpanded] = React.useState(true);
 
@@ -26,7 +26,7 @@ export const PreviewsVerticalDrawer: React.FC<VerticalDrawerProps> = React.memo(
     height: expanded ? EXPANDED_HEIGHT : COLLAPSED_HEIGHT,
   };
 
-  const collapseButtonText = expanded ? `\\/` : `/\\`;
+  const collapseButtonText = expanded ? `> collapse <` : `< expand >`;
 
   return (
     <View style={containerStyle}>
@@ -49,12 +49,14 @@ const styles = StyleSheet.create({
   },
   collapseButton: {
     alignContent: 'center',
-    padding: 10,
-    borderRadius: 100,
-    borderColor: 'blue',
+    padding: 5,
     borderWidth: 2,
+    borderColor: '#79AFD2',
+    backgroundColor: '#94C1DB',
   },
   collapseButtonText: {
     textAlign: 'center',
+    fontWeight: 'bold',
+    fontStyle: 'italic',
   },
 });

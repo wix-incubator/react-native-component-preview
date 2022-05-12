@@ -9,15 +9,15 @@ interface ComponentPreviewsProps {
 }
 
 export const ComponentPreviews: React.FC<ComponentPreviewsProps> = React.memo(({previews}) => {
-  const [currentPreviews, setCurrentPreviews] = React.useState<Array<() => JSX.Element>>();
+  const [currentPreviewData, setCurrentPreviewData] = React.useState<ComponentPreviewData>();
 
-  const handleOnItemPress = (preview: ComponentPreviewData) => {
-    setCurrentPreviews(preview.previews);
+  const handleOnItemPress = (previewData: ComponentPreviewData) => {
+    setCurrentPreviewData(previewData);
   };
 
   return (
     <View style={styles.container}>
-      {currentPreviews && <ComponentPreviewRenderer previews={currentPreviews} />}
+      {currentPreviewData && <ComponentPreviewRenderer previewData={currentPreviewData} />}
       <PreviewsVerticalDrawer previews={previews} onPreviewPress={handleOnItemPress} />
     </View>
   );
