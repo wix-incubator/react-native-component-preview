@@ -31,3 +31,6 @@ const PreviewScreen = <ComponentPreviews previews={previews} />
 ### Example
 
 Example app is included under /example directory. Run it as a regular react native expo application.
+
+https://user-images.githubusercontent.com/5536851/168235393-c48dd8db-0939-4a58-bd93-498b8ce05712.mov
+
