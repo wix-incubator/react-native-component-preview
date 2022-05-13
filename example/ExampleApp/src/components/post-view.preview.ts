@@ -1,7 +1,7 @@
 import {ComponentPreviewBuilder} from 'react-native-component-preview';
 import {PostView} from './post-view';
 
-export const postViewPreview = new ComponentPreviewBuilder({title: 'PostView', component: PostView})
+export const postViewPreview = new ComponentPreviewBuilder({title: 'Post View', component: PostView})
   .withPreview({
     contentText: '',
     authorName: '',
