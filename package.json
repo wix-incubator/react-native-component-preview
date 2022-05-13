@@ -1,6 +1,6 @@
 {
   "name": "react-native-component-preview",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A small library for previewing react components",
   "license": "MIT",
   "author": "Eimantas Tučas <eimantast@wix.com>",

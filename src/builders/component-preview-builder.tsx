@@ -1,11 +1,11 @@
 import React from 'react';
-import {ComponentPreviewData, PreviewContainerType} from '../../types';
+import {ComponentPreviewData, PreviewContainerType, PreviewConfig} from '../../types';
 
 export class ComponentPreviewBuilder<P> {
   private title: string;
   private containerType: PreviewContainerType;
   private component: React.ComponentType<P>;
-  private previews: Array<P> = [];
+  private previews: Array<{props: P; config: PreviewConfig}> = [];
 
   constructor({
     title,
@@ -22,13 +22,16 @@ export class ComponentPreviewBuilder<P> {
     this.component = component;
   }
 
-  withPreview(props: P) {
-    this.previews.push(props);
+  withPreview(props: P, config: PreviewConfig = {}) {
+    this.previews.push({props, config});
     return this;
   }
 
   build(): ComponentPreviewData {
-    const previews = this.previews.map((preview) => () => <this.component {...preview} />);
+    const previews = this.previews.map((preview) => ({
+      component: () => <this.component {...preview.props} />,
+      config: preview.config,
+    }));
 
     return {
       title: this.title,

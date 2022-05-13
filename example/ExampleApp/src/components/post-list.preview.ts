@@ -6,16 +6,22 @@ export const postListPreview = new ComponentPreviewBuilder({
   component: PostList,
   containerType: 'View',
 })
-  .withPreview({
-    isLoading: true,
-    posts: [],
-  })
-  .withPreview({
-    isLoading: false,
-    posts: [
-      {authorName: 'Johny', contentText: 'First!', isLiked: false},
-      {authorName: 'Mary Jane', contentText: 'I like this app.', isLiked: true},
-      {authorName: 'John Smith Jameson', contentText: 'I am a bot.', isLiked: true},
-    ],
-  })
+  .withPreview(
+    {
+      isLoading: true,
+      posts: [],
+    },
+    {title: 'Loading Data'}
+  )
+  .withPreview(
+    {
+      isLoading: false,
+      posts: [
+        {authorName: 'Johny', contentText: 'First!', isLiked: false},
+        {authorName: 'Mary Jane', contentText: 'I like this app.', isLiked: true},
+        {authorName: 'John Smith Jameson', contentText: 'I am a bot.', isLiked: true},
+      ],
+    },
+    {title: '3 items'}
+  )
   .build();

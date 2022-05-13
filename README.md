@@ -15,7 +15,9 @@ import {ComponentPreviewBuilder, ComponentPreviews} from 'react-native-component
 export const postContentPreview = new ComponentPreviewBuilder({title: 'Post', component: PostContent})
   .withPreview({
     content: '',
-  })
+  },
+  {title: 'Empty'}
+  )
   .withPreview({
     content: 'Hello World',
   })
