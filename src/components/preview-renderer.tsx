@@ -9,7 +9,7 @@ export interface ComponentPreviewRendererProps {
 export const ComponentPreviewRenderer: React.FC<ComponentPreviewRendererProps> = React.memo(({previewData}) => {
   const Wrapper = previewData.containerType === 'Scroll' ? ScrollView : View;
   return (
-    <Wrapper style={styles.container}>
+    <Wrapper style={styles.container} contentContainerStyle={styles.contentContainerStyle}>
       {previewData.previews.map((preview, key) => (
         <PreviewRenderer preview={preview} key={key} />
       ))}
@@ -33,6 +33,9 @@ const PreviewRenderer: React.FC<PreviewRendererProps> = React.memo(({preview}) =
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#bababa',
+  },
+  contentContainerStyle: {
+    paddingBottom: 50,
   },
   componentContainer: {
     marginVertical: 4,
