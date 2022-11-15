@@ -1,10 +1,10 @@
 import React from 'react';
 import {ComponentPreviewData, PreviewContainerType, PreviewConfig} from '../../types';
 
-export class ComponentPreviewBuilder<P extends JSX.IntrinsicAttributes> {
+export class ComponentPreviewBuilder<P> {
   private title: string;
   private containerType: PreviewContainerType;
-  private component: React.ComponentType<P>;
+  private component: React.ComponentType<any>;
   private previews: Array<{props: P; config: PreviewConfig}> = [];
 
   constructor({
